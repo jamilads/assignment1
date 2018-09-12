@@ -8,8 +8,11 @@
 
 import UIKit
 
-class NowNowPlayingViewController: UIViewController {
+class NowNowPlayingViewController: UIViewController, UITableView {
 
+    @IBOutlet weak var tableview: UITableViewCell!
+    
+    tableView.dataSource = self
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +36,7 @@ class NowNowPlayingViewController: UIViewController {
         
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
